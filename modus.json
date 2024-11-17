@@ -6,5 +6,33 @@
       "path": "/graphql",
       "auth": "bearer-token"
     }
+  },
+  "models": {
+    "text-generator": {
+      "sourceModel": "gpt-4o",
+      "connection": "openai",
+      "path": "v1/chat/completions"
+    },
+    "text-embedder": {
+      "sourceModel": "text-embedding-ada-002",
+      "connection": "openai",
+      "path": "v1/embeddings"
+    }
+  },
+  "connections": {
+    "neo4j": {
+      "baseUrl": "https://diffbot.neo4jlabs.com:7473/db/neo4j/query/v2",
+      "type": "http",
+      "headers": {
+        "Authorization": "Basic {{base64(USERNAME:PASSWORD)}}"
+      }
+    },
+    "openai": {
+      "baseUrl": "https://api.openai.com",
+      "type": "http",
+      "headers": {
+        "Authorization": "Bearer {{OPENAI_API_KEY}}"
+      }
+    }
   }
 }
