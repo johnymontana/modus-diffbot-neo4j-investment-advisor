@@ -1,0 +1,9 @@
+{
+  company(name:"Nvidia") {
+    id, name
+  }
+  embedText(text:"test") 
+  news(text:"company acquires competitor") {
+    id, title, author, score
+  }
+}
