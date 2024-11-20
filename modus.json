@@ -21,14 +21,14 @@
   },
   "connections": {
     "neo4j": {
-      "baseUrl": "https://diffbot.neo4jlabs.com:7473/db/neo4j/query/v2",
+      "baseUrl": "https://diffbot.neo4jlabs.com:7473/",
       "type": "http",
       "headers": {
         "Authorization": "Basic {{base64(USERNAME:PASSWORD)}}"
       }
     },
     "openai": {
-      "baseUrl": "https://api.openai.com",
+      "baseUrl": "https://api.openai.com/",
       "type": "http",
       "headers": {
         "Authorization": "Bearer {{OPENAI_API_KEY}}"
